@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáfaro Duplo no Tinkercad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <a href="index.html">|   Principal   |</a>
+    <a href="index2.html">Semáfaro Simples no Tinkercad   |</a>
+    <a href="index3.html">Semáfaro Simples com Arduíno na Prática   |</a>
+    <a href="index4.html">Semáfaro Duplo no Tinkercad   |</a>
+    <br>
+    <a href="index5.html">Semáfaro Duplo com Arduíno na Prática  |</a>
+    <a href="index6.html">Contador crescente de 0 à 9   |</a>
+    <a href="index7.html">Contador decrescente de 9 à 0   |</a>
+    <a href="index8.html">Contador decrescente de 9 à 0 com Semáfaro Duplo   |</a>
+</div>
+
+    <h2>Circuito do Semáfaro Duplo</h2>
+    <br>
+    <img src="Sem títulosemafaroduplo.jpg" alt="Circuito do Semáfaro Duplo"><br>
+    <small>Fonte: Tinkercad</small>
+    <br>
+    <h2>Código em Texto</h2>
+    <pre>// C++ code
+        //
+        void setup()
+        {
+          pinMode(13, OUTPUT);
+          pinMode(7, OUTPUT);
+          pinMode(12, OUTPUT);
+          pinMode(10, OUTPUT);
+          pinMode(11, OUTPUT);
+        }
+        
+        void loop()
+        {
+          digitalWrite(13, HIGH);
+          digitalWrite(7, HIGH);
+          delay(7000); // Wait for 7000 millisecond(s)
+          digitalWrite(12, HIGH);
+          digitalWrite(13, LOW);
+          delay(2000); // Wait for 2000 millisecond(s)
+          digitalWrite(7, LOW);
+          digitalWrite(12, LOW);
+          digitalWrite(10, HIGH);
+          digitalWrite(11, HIGH);
+          delay(7000); // Wait for 7000 millisecond(s)
+          digitalWrite(11, LOW);
+          digitalWrite(12, HIGH);
+          delay(2000); // Wait for 2000 millisecond(s)
+          digitalWrite(12, LOW);
+          digitalWrite(10, LOW);
+          delay(1); // Wait for 1 millisecond(s)
+        }
+    </pre>
+</body>
+</html>

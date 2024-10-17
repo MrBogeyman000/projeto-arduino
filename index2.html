@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáfaro Simples no Tinkercad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <div>
+        <a href="index.html">|   Principal   |</a>
+        <a href="index2.html">Semáfaro Simples no Tinkercad   |</a>
+        <a href="index3.html">Semáfaro Simples com Arduíno na Prática   |</a>
+        <a href="index4.html">Semáfaro Duplo no Tinkercad   |</a>
+        <br>
+        <a href="index5.html">Semáfaro Duplo com Arduíno na Prática  |</a>
+        <a href="index6.html">Contador crescente de 0 à 9   |</a>
+        <a href="index7.html">Contador decrescente de 9 à 0   |</a>
+        <a href="index8.html">Contador decrescente de 9 à 0 com Semáfaro Duplo   |</a>
+    </div>
+    <br>
+    <h2>Circuito no Tinkercad</h2>
+    <br>
+    <img src="Sem títulosemafarosimples.jpg" alt="circuito no tinkercad">
+    <br>
+    <small>Fonte: Tinkercad</small>
+    <br>
+    <h2>Programação do Semáfaro em Diagrama de Blocos</h2>
+    <br>
+    <img src="Sem títulosemafaroemblcoos.jpg" alt="semafaro em blocos">
+    <br>
+    <small>Fonte: Tinkercad</small>
+    <br>
+    <h2>Código em Texto</h2>
+    <pre>// C++ code
+        //
+        int contador = 0;
+        
+        int counter;
+        
+        void setup()
+        {
+          pinMode(12, OUTPUT);
+          pinMode(4, OUTPUT);
+          pinMode(8, OUTPUT);
+        
+          contador = 3;
+        }
+        
+        void loop()
+        {
+             for (counter = 0; counter < 2; ++counter) {
+            digitalWrite(12, HIGH);
+                                 delay(7000); // Wait for 7000 millisecond(s)
+            digitalWrite(12, LOW);
+            digitalWrite(4, HIGH);
+                                  delay(5000); // Wait for 5000 millisecond(s)
+            digitalWrite(4, LOW);
+            digitalWrite(8, HIGH);
+                                  delay(2000); // Wait for 2000 millisecond(s)
+            digitalWrite(8, LOW);
+          }
+          while (contador > 1) {
+            digitalWrite(8, HIGH);
+                                  delay(1000); // Wait for 1000 millisecond(s)
+            digitalWrite(8, LOW);
+            }
+        }
+    </pre>
+</body>
+</html>
